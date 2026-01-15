@@ -8,17 +8,17 @@ The allowed types are based on the [Angular convention] (including some of [its 
 [its older version]: <https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines>
 [Conventional Commits]: <https://conventionalcommits.org/>
 
-| Type         | Description ("this commit will...")              | Example |
-| ----------   | ------------------------------------------------ | ------- |
-| [`build`]    | Affect the build system or external dependencies | build(npm): install package |
-| [`ci`]       | Affect CI configuration files and scripts        | ci(ga): configure github pages action |
-| [`docs`]     | Affect documentation only                        | docs: explain getItem parameters |
-| [`feat`]     | Add a new feature to the codebase                | feat(parser):  |
-| [`fix`]      | Patch a bug in the codebase                      | (example) |
-| [`perf`]     | Improve performance                              | (example) |
-| [`refactor`] | Neither fix a bug nor add a feature              | (example) |
-| [`style`]    | Not affect the meaning of the code               | Whitespace, formatting, missing semicolons |
-| [`test`]     | Add missing tests or correct existing tests      | (example) |
+| Type         | Description ("this commit will...")              |
+| ----------   | ------------------------------------------------ |
+| [`build`]    | Affect the build system or external dependencies |
+| [`ci`]       | Affect CI configuration files and scripts        |
+| [`docs`]     | Affect documentation only                        |
+| [`feat`]     | Add a new feature to the codebase                |
+| [`fix`]      | Patch a bug in the codebase                      |
+| [`perf`]     | Improve performance                              |
+| [`refactor`] | Neither fix a bug nor add a feature              |
+| [`style`]    | Not affect the meaning of the code               |
+| [`test`]     | Add missing tests or correct existing tests      |
 
 [`build`   ]: #build
 [`ci`      ]: #continuous-integration
