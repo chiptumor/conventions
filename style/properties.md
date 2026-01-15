@@ -1,0 +1,123 @@
+# Properties
+
+NOTES:
+
+  - Directional property orders:
+
+    - Sides:
+      - Fixed:
+        - Vertical (top and bottom, if applicable)
+        - Horizontal (left and right, if applicable)
+        - `top`
+        - `right`
+        - `bottom`
+        - `left`
+      - Logical:
+        - `inline`
+          - `inline-start`
+          - `inline-end`
+        - `block`
+          - `block-start`
+          - `block-end`
+    - Corners:
+      - Fixed:
+        - `top-left`
+        - `top-right`
+        - `bottom-right`
+        - `bottom-left`
+      - Logical:
+        - `start-start`
+        - `start-end`
+        - `end-end`
+        - `end-start`
+  
+  - Property categories:
+
+    - Variables
+    - `all`
+    - Vendor prefix properties
+    - Independent:
+      - Visibility:
+        - `content`
+        - `appearance`
+        - `display`
+        - `box-sizing`
+        - `clear`
+        - `z-index`
+      - Interaction:
+        - `cursor`
+        - `caret-color`
+    - Flow:
+      - Sizes:
+        - `width`
+        - `height`
+        - `inline-size`
+        - `block-size`
+        - `aspect-ratio`
+      - Position:
+        - `position`
+        - `inset` (sides)
+          - `<fixed side>`
+          - ...`-<logical side>`
+      - Grid/Flex:
+        - `caption-side`
+        - `align-content`
+        - `align-items`
+        - `align-self`
+    - Coloring:
+      - SVG:
+        - `clip-rule`
+      - Text:
+      - Box:
+        - Border:
+          - `border` (sides, shorthand)
+            - ...`-style`
+            - ...`-width`
+            - ...`-color`
+            - ...`-<side>` (shorthand)
+              - ...`-style`
+              - ...`-width`
+              - ...`-color`
+          - `border-image` (shorthand)
+            - ...`-source`
+            - ...`-slice`
+            - ...`-outset`
+            - ...`-width`
+            - ...`-repeat`
+          - `border-collapse`
+          - `border-spacing`
+          - `border-radius` (corners)
+            - `border-<corner>-radius`
+        - Background:
+          - `background` (shorthand)
+            - ...`-color`
+            - ...`-image`
+            - ...`-attachment`
+            - ...`-origin`
+            - ...`-position` (shorthand)
+              - ...`-x`
+              - ...`-y`
+            - ...`-repeat`
+            - ...`-clip`
+          - `background-blend-mode`
+          - `backdrop-filter`
+          - `box-shadow`
+          - `box-decoration-break`
+          - `backface-visibility`
+    - Final:
+      - Dependent:
+        - `clip-path`
+        - `filter`
+        - `animation` (shorthand)
+          - ...`-play-state`
+          - ...`-name`
+          - ...`-duration`
+          - ...`-delay`
+          - ...`-direction`
+          - ...`-timing-function`
+          - ...`-iteration-count`
+          - ...`-fill-mode`
+      - Print:
+        - `break-before`
+        - `break-inside`
+        - `break-after`
