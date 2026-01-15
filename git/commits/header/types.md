@@ -68,10 +68,18 @@ Commits with the type `docs` affect only the documentation.
 
 ### Examples
 
-This commit writes an explanation of the `getItem()` function in the docs.
+This commit adds a warning to the docs of a deprecated variable.
 
 ```plain text
-docs: explain getItem() paramaters
+docs: warn that ROOM_PRICE is deprecated
+```
+
+### Examples with scopes
+
+This commit provides an explanation of a function's parameters using JSDocs.
+
+```plain text
+docs(jsdoc): describe getItem parameters
 ```
 
 ## Feature
