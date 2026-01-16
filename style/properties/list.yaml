@@ -1,0 +1,257 @@
+directional:
+  lengths:
+    - group: Logical
+      props:
+        - block-size
+        - inline-size
+    - group: Fixed
+      props:
+        - prop: size
+          short:
+            - width
+            - height
+  sides:
+    - group: Logical
+      props:
+        - prop: block
+          short:
+            - $-start
+            - $-end
+        - prop: inline
+          short:
+            - $-start
+            - $-end
+    - group: Fixed
+      props:
+        - group: Bidirectional
+          props:
+            - var: Horizontal
+            - var: Vertical
+        - top
+        - right
+        - bottom
+        - left
+  corners:
+    - group: Logical
+      props:
+        - start-start
+        - start-end
+        - end-end
+        - end-start
+    - group: Fixed
+      props:
+        - top-left
+        - top-right
+        - bottom-right
+        - bottom-left
+properties:
+  - var: Variables
+  - all
+  - var: Vendor prefix properties
+  - group: SVG
+    props:
+      - group: Shape
+        props:
+          - fill-rule
+          - clip-rule
+      - group: Element
+        props:
+          - dominant-baseline
+          - d
+          - flood-color
+          - flood-opacity
+      - group: Color
+        props:
+          - fill
+          - fill-opacity
+          - color-scheme
+          - color-interpolation
+          - color-interpolation-filters
+          - cx
+          - cy
+  - group: Independent
+    props:
+      - group: Content
+        props:
+          - content
+          - counter-reset
+          - counter-set
+          - counter-increment
+          - prop: container
+            short:
+              - $-name
+              - $-type
+          - content-visibility
+          - contain
+      - group: Visibility
+        props:
+          - appearance
+          - direction
+          - display
+          - box-sizing
+          - z-index
+      - group: Interaction
+        props:
+          - cursor
+          - caret-color
+  - group: Flow
+    props:
+      - group: Sizes
+        props:
+          - contain-intrinsic-<length>
+          - <length>
+          - aspect-ratio
+      - group: Position
+        props:
+          - position
+          - prop: inset
+            short:
+              - <fixed side>
+              - $-<logical side>
+      - group: Structure
+        props:
+          - group: Table
+            props:
+              - caption-side
+              - empty-cells
+          - group: Grid/Flex
+            props:
+              - group: Item
+                props:
+                  - prop: flex
+                    short:
+                      - $-basis
+                      - $-shrink
+                      - $-grow
+                  - align-self
+              - group: Container
+                props:
+                  - prop: flex-flow
+                    short:
+                      - flex-direction
+                      - flex-wrap
+                  - align-content
+                  - align-items
+          - group: Column
+            props:
+              - column-span
+              - prop: columns
+                short:
+                  - column-count
+                  - column-width
+              - column-gap
+              - column-fill
+          - group: Block
+            props:
+              - float
+          - group: Inline
+            props:
+              - clear
+              - line-height
+      - group: Style
+        props:
+          - group: Text
+            props:
+              - color
+              - font-pallete
+              - forced-color-adjust
+              - prop: font
+                short:
+                  - $-family
+                  - prop: $-variant
+                    short:
+                      - $-caps
+                      - $-numeric
+                      - $-position
+                      - $-ligatures
+                      - $-east-asian
+                      - $-alternates
+                      - $-emoji
+                  - $-size
+                  - $-width
+                  - $-weight
+                  - $-style
+              - prop: font-synthesis
+                short:
+                  - $-weight
+                  - $-style
+                  - $-synthesis
+                  - $-position
+              - font-variation-settings
+              - font-size-adjust
+              - font-kerning
+              - font-optical-sizing
+              - font-feature-settings
+              - font-language-override
+              - font-smooth
+          - group: Box
+            props:
+              - group: Border
+                props:
+                  - prop: border
+                    short:
+                      - $-style
+                      - $-width
+                      - $-color
+                      - prop: $-<side>
+                        short:
+                          - $-style
+                          - $-width
+                          - $-color
+                  - prop: border-image
+                    short:
+                      - $-source
+                      - $-slice
+                      - $-outset
+                      - $-width
+                      - $-repeat
+                  - border-collapse
+                  - border-spacing
+                  - prop: border-radius
+                    short:
+                      - border-<corner>-radius
+                  - prop: column-rule
+                    short:
+                      - $-style
+                      - $-width
+                      - $-color
+              - group: Background
+                props:
+                  - prop: background
+                    short:
+                      - $-color
+                      - $-image
+                      - $-attachment
+                      - $-origin
+                      - prop: $-position
+                        short:
+                          - $-x
+                          - $-y
+                      - $-repeat
+                      - $-clip
+                  - background-blend-mode
+                  - backdrop-filter
+                  - box-shadow
+                  - box-decoration-break
+                  - backface-visibility
+          - group: Final
+            props:
+              - group: Dependent
+                props:
+                  - clip-path
+                  - filter
+                  - prop: animation
+                    short:
+                      - $-play-state
+                      - $-name
+                      - $-duration
+                      - $-delay
+                      - $-direction
+                      - $-timing-function
+                      - $-iteration-count
+                      - $-fill-mode
+              - group: Print
+                props:
+                  - break-before
+                  - break-inside
+                  - break-after
