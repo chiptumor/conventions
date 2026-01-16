@@ -1,49 +1,64 @@
-directional:
-  lengths:
-    - group: Logical
-      props:
-        - block-size
-        - inline-size
-    - group: Fixed
-      props:
-        - prop: size
-          short:
-            - width
-            - height
-  sides:
-    - group: Logical
-      props:
-        - prop: block
-          short:
-            - $-start
-            - $-end
-        - prop: inline
-          short:
-            - $-start
-            - $-end
-    - group: Fixed
-      props:
-        - group: Bidirectional
-          props:
-            - var: Horizontal
-            - var: Vertical
-        - top
-        - right
-        - bottom
-        - left
-  corners:
-    - group: Logical
-      props:
-        - start-start
-        - start-end
-        - end-end
-        - end-start
-    - group: Fixed
-      props:
-        - top-left
-        - top-right
-        - bottom-right
-        - bottom-left
+substitute:
+  - name: Directional
+    short: dir
+    items:
+      - name: Lengths
+        short: len
+        items:
+          - name: Logical
+            short: logic
+            props:
+              - block-size
+              - inline-size
+          - name: Fixed
+            short: fixed
+            props:
+              - prop: size
+                short:
+                  - width
+                  - height
+      - name: Sides
+        short: sid
+        items:
+          - name: Logical
+            short: logic
+            props:
+              - prop: block
+                short:
+                  - $-start
+                  - $-end
+              - prop: inline
+                short:
+                  - $-start
+                  - $-end
+          - name: Fixed
+            short: fixed
+            props:
+              - group: Bidirectional
+                props:
+                  - var: Horizontal
+                  - var: Vertical
+              - top
+              - right
+              - bottom
+              - left
+      - name: Corners
+        short: cor
+        items:
+          - name: Logical
+            short: logic
+            props:
+              - start-start
+              - start-end
+              - end-end
+              - end-start
+          - name: Fixed
+            short: fixed
+            props:
+              - top-left
+              - top-right
+              - bottom-right
+              - bottom-left
 properties:
   - var: Variables
   - all
@@ -98,8 +113,8 @@ properties:
     props:
       - group: Sizes
         props:
-          - contain-intrinsic-<length>
-          - <length>
+          - contain-intrinsic-<dir.len>
+          - <dir.len ! size>
           - aspect-ratio
       - group: Position
         props:
