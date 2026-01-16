@@ -4,70 +4,155 @@ NOTES:
 
   - Directional property orders:
 
-    - Sides:
+    - Lengths:
+      - Logical:
+        - `block-size`
+        - `inline-size`
       - Fixed:
-        - Vertical (top and bottom, if applicable)
-        - Horizontal (left and right, if applicable)
+        - `size` (shorthand)
+          - `width`
+          - `height`
+    - Sides:
+      - Logical:
+        - `block` (shorthand)
+          - `block-start`
+          - `block-end`
+        - `inline` (shorthand)
+          - `inline-start`
+          - `inline-end`
+      - Fixed:
+        - Bidirectional:
+          - Horizontal
+          - Vertical
         - `top`
         - `right`
         - `bottom`
         - `left`
-      - Logical:
-        - `inline`
-          - `inline-start`
-          - `inline-end`
-        - `block`
-          - `block-start`
-          - `block-end`
     - Corners:
-      - Fixed:
-        - `top-left`
-        - `top-right`
-        - `bottom-right`
-        - `bottom-left`
       - Logical:
         - `start-start`
         - `start-end`
         - `end-end`
         - `end-start`
+      - Fixed:
+        - `top-left`
+        - `top-right`
+        - `bottom-right`
+        - `bottom-left`
   
   - Property categories:
 
     - Variables
     - `all`
     - Vendor prefix properties
+    - SVG:
+      - Shape:
+        - `fill-rule`
+        - `clip-rule`
+      - Element:
+        - `dominant-baseline`
+        - `d`
+        - `flood-color`
+        - `flood-opacity`
+      - Color:
+        - `fill`
+        - `fill-opacity`
+        - `color-scheme`
+        - `color-interpolation`
+        - `color-interpolation-filters`
+        - `cx`
+        - `cy`
     - Independent:
-      - Visibility:
+      - Content:
         - `content`
+        - `counter-reset`
+        - `counter-set`
+        - `counter-increment`
+        - `container` (shorthand)
+          - ...`-name`
+          - ...`-type`
+        - `content-visibility`
+        - `contain`
+      - Visibility:
         - `appearance`
+        - `direction`
         - `display`
         - `box-sizing`
-        - `clear`
         - `z-index`
       - Interaction:
         - `cursor`
         - `caret-color`
     - Flow:
       - Sizes:
-        - `width`
-        - `height`
-        - `inline-size`
-        - `block-size`
+        - `contain-intrinsic-`... (lengths)
+          - ...`<length>`
+        - `<length>`
         - `aspect-ratio`
       - Position:
         - `position`
         - `inset` (sides)
           - `<fixed side>`
           - ...`-<logical side>`
-      - Grid/Flex:
-        - `caption-side`
-        - `align-content`
-        - `align-items`
-        - `align-self`
-    - Coloring:
-      - SVG:
-        - `clip-rule`
+      - Structure:
+        - Table:
+          - `caption-side`
+          - `empty-cells`
+        - Grid/Flex:
+          - Item:
+            - `flex` (shorthand)
+              - ...`-basis`
+              - ...`-shrink`
+              - ...`-grow`
+            - `align-self`
+          - Container:
+            - `flex-flow` (shorthand)
+              - `flex-direction`
+              - `flex-wrap`
+            - `align-content`
+            - `align-items`
+        - Column:
+          - `column-span`
+          - `columns` (shorthand)
+            - `column-count`
+            - `column-width`
+          - `column-gap`
+          - `column-fill`
+        - Block:
+          - `float`
+        - Inline:
+          - `clear`
+          - `line-height`
+    - Style:
       - Text:
+        - `color`
+        - `font-pallete`
+        - `forced-color-adjust`
+        - `font` (shorthand)
+          - ...`-family`
+          - ...`-variant` (shorthand)
+            - ...`-caps`
+            - ...`-numeric`
+            - ...`-position`
+            - ...`-ligatures`
+            - ...`-east-asian`
+            - ...`-alternates`
+            - ...`-emoji`
+          - ...`-size`
+          - ...`-width`
+          - ...`-weight`
+          - ...`-style`
+        - `font-synthesis` (shorthand)
+          - ...`-weight`
+          - ...`-style`
+          - ...`-synthesis`
+          - ...`-position`
+        - `font-variation-settings`
+        - `font-size-adjust`
+        - `font-kerning`
+        - `font-optical-sizing`
+        - `font-feature-settings`
+        - `font-language-override`
+        - `font-smooth`
       - Box:
         - Border:
           - `border` (sides, shorthand)
@@ -88,6 +173,10 @@ NOTES:
           - `border-spacing`
           - `border-radius` (corners)
             - `border-<corner>-radius`
+          - `column-rule` (shorthand)
+            - ...`-style`
+            - ...`-width`
+            - ...`-color`
         - Background:
           - `background` (shorthand)
             - ...`-color`
