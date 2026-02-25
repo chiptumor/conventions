@@ -7,6 +7,7 @@ NOTES:
       - `public`
       - `protected`
       - `private`
+    - `abstract` last
     - `static` last
     - `readonly` first
     - Index signature (`[key: any]: any`) last
@@ -24,18 +25,18 @@ NOTES:
 
     ```ts
     class Example {
-      public                    (): any;
-      public                    constructor ();
-      public                    property: any;
-      public                    property?: any;
-      public                    get property(): any;
-      public                    get property?(): any;
-      public                    property(): any;
-      public                    property?(): any;
-      public                    [key: any]: any;
-      public                    [key: any]?: any;
-      public                    [key: any](): any;
-      public                    [key: any]?(): any;
+      (): any;
+      public constructor ();
+      public property: any;
+      public property?: any;
+      public get property(): any;
+      public get property?(): any;
+      public property(): any;
+      public property?(): any;
+      public [key: any]: any;
+      public [key: any]?: any;
+      public [key: any](): any;
+      public [key: any]?(): any;
       public           readonly property;
       public    static          property;
       public    static readonly property;
@@ -47,5 +48,9 @@ NOTES:
       private          readonly property;
       private   static          property;
       private   static readonly property;
+      public    abstract                 property;
+      public    abstract static readonly property;
+      protected abstract                 property;
+      protected abstract static readonly property;
     }
     ```
