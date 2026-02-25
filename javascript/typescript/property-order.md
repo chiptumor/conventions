@@ -3,14 +3,8 @@
 NOTES:
 
   - Order:
-    - `abstract` last
+    - `abstract` first
     - `override` last
-    - Visibility:
-      - `public`
-      - `protected`
-      - `private`
-    - `static` last
-    - `readonly` first
     - Index signature (`[key: any]: any`) last
     - Optional last (`property?: any`)
     - Types:
@@ -21,3 +15,10 @@ NOTES:
       - Get accessor: `get property(): any`
       - Set accessor: `set property(): any`
       - Method: `property(): any`
+    - `static` first
+    - `readonly` first
+    - Visibility:
+      - `public`
+      - `protected`
+      - `private`
+    - Alphabetical
