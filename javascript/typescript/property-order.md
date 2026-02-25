@@ -18,7 +18,7 @@ NOTES:
     - `static` first
     - `readonly` first
     - Visibility:
-      - `public`
-      - `protected`
       - `private`
+      - `protected`
+      - `public`
     - Alphabetical
