@@ -10,6 +10,7 @@ NOTES:
     - `static` last
     - `readonly` first
     - Index signature (`[key: any]: any`) last
+    - Optional last (`property?: any`)
     - Types:
       - Call signature: `(): any`
       - Constructor: `constructor ()`
@@ -25,15 +26,16 @@ NOTES:
     class Example {
       public                    (): any;
       public                    constructor ();
-      public                    new (): any;
       public                    property: any;
+      public                    property?: any;
       public                    get property(): any;
-      public                    set property(): any;
+      public                    get property?(): any;
       public                    property(): any;
+      public                    property?(): any;
       public                    [key: any]: any;
-      public                    get [key: any](): any;
-      public                    set [key: any](): any;
+      public                    [key: any]?: any;
       public                    [key: any](): any;
+      public                    [key: any]?(): any;
       public           readonly property;
       public    static          property;
       public    static readonly property;
