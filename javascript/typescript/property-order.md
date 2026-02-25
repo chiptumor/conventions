@@ -3,11 +3,12 @@
 NOTES:
 
   - Order:
+    - `abstract` last
+    - `override` last
     - Visibility:
       - `public`
       - `protected`
       - `private`
-    - `abstract` last
     - `static` last
     - `readonly` first
     - Index signature (`[key: any]: any`) last
@@ -20,37 +21,3 @@ NOTES:
       - Get accessor: `get property(): any`
       - Set accessor: `set property(): any`
       - Method: `property(): any`
-
-    Example:
-
-    ```ts
-    class Example {
-      (): any;
-      public constructor ();
-      public property: any;
-      public property?: any;
-      public get property(): any;
-      public get property?(): any;
-      public property(): any;
-      public property?(): any;
-      public [key: any]: any;
-      public [key: any]?: any;
-      public [key: any](): any;
-      public [key: any]?(): any;
-      public           readonly property;
-      public    static          property;
-      public    static readonly property;
-      protected                 property;
-      protected        readonly property;
-      protected static          property;
-      protected static readonly property;
-      private                   property;
-      private          readonly property;
-      private   static          property;
-      private   static readonly property;
-      public    abstract                 property;
-      public    abstract static readonly property;
-      protected abstract                 property;
-      protected abstract static readonly property;
-    }
-    ```
