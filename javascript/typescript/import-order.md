@@ -2,12 +2,13 @@
 
 NOTES:
 
-  - `type` last (`import type`)
   - Import variations:
     - Side effect (`import SOURCE`)
     - Default (`import ITEM from SOURCE`)
-    - Individual (`import { ITEM } from SOURCE`):
+    - Individual (`import { ITEM } from SOURCE`)
       - `type` last (`ITEM, type ITEM`)
+    - Default type (`import type ITEM from SOURCE`)
+    - Individual type (`import type { ITEM } from SOURCE`)
     - Namespace (`import * as ITEM from SOURCE`)
   - Directory nesting:
     - Local (`./file.ts`)
